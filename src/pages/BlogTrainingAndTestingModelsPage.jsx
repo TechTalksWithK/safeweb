@@ -62,7 +62,7 @@ const Divider = () => (
   </div>
 );
 
-export default function BlogTrainingAndTestingModelsPage() {
+export default function TrainingAndTestingTheModels() {
   return (
     <main className="bg-white text-black">
       {/* Hero */}

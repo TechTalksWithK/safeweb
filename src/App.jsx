@@ -7,7 +7,7 @@ import ReviewsPage from './pages/ReviewsPage'
 import StudiesPage from './pages/StudiesPage'
 import FAQPage from './pages/FAQPage'
 import SponsorshipsPage from './pages/SponsorshipsPage'
-import BlogTrainingAndTestingModelsPage from './pages/BlogTrainingAndTestingModelsPage'
+import TrainingAndTestingTheModels from './pages/BlogTrainingAndTestingModelsPage'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -42,7 +42,7 @@ function App() {
           <Route path="/sponsorships" element={<SponsorshipsPage />} />
           <Route
             path="/blog/training-and-testing-the-models"
-            element={<BlogTrainingAndTestingModelsPage />}
+            element={<TrainingAndTestingTheModels />}
           />
         </Routes>
       </div>
