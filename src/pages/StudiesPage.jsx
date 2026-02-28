@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom'
+
 export default function StudiesPage() {
+  const navigate = useNavigate()
   return (
     <main className="pt-[56px] min-h-screen">
       <div className="max-w-[860px] mx-auto px-6 py-16">
@@ -6,7 +9,7 @@ export default function StudiesPage() {
         {/* Page header */}
         <div className="text-center mb-14">
           <h1 className="text-3xl font-bold text-black mb-4 tracking-wide">Studies</h1>
-          <div className="w-16 h-[2px] mx-auto" style={{ backgroundColor: '#39ff14' }} />
+          <div className="w-16 h-[2px] mx-auto" style={{ backgroundColor: '#ffffff' }} />
           <p className="text-sm text-gray-600 mt-6 max-w-lg mx-auto">
             Research findings and model study documentation.
           </p>
@@ -19,7 +22,7 @@ export default function StudiesPage() {
           <a
             href="#preliminary-study"
             className="text-sm font-medium transition-opacity duration-150 hover:opacity-70"
-            style={{ color: '#39ff14' }}
+            style={{ color: '#000000' }}
           >
             Jump to preliminary study ↓
           </a>
@@ -29,7 +32,8 @@ export default function StudiesPage() {
         <section id="preliminary-study">
           <article
             className="rounded-lg px-6 py-6 cursor-pointer transition-all duration-150"
-            style={{ backgroundColor: '#39ff14', border: '1px solid rgba(0,0,0,0.07)' }}
+            style={{ backgroundColor: '#ffffff', border: '1px solid rgba(0,0,0,0.07)' }}
+            onClick={() => navigate('/blog/training-and-testing-the-models')}
             onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(0,0,0,0.2)'}
             onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(0,0,0,0.07)'}
           >
