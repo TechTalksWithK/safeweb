@@ -28,7 +28,7 @@ const ShieldLogo = () => (
 
 const navLinks = [
   { label: 'About Us',      path: '/about-us' },
-  { label: 'Reviews',       path: '/reviews' },
+  { label: 'Studies',       path: '/studies' },
   { label: 'FAQ',           path: '/faq' },
   { label: 'Sponsorships',  path: '/sponsorships' },
 ]
