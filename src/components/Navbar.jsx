@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const ShieldLogo = () => (
   <svg width="34" height="38" viewBox="0 0 34 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,8 +36,6 @@ const navLinks = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [hovered, setHovered] = useState(false)
-  const location = useLocation()
-  const isStudiesPage = location.pathname === '/studies'
 
   return (
     <>
@@ -105,7 +103,7 @@ export default function Navbar() {
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.backgroundColor = 'rgba(57,255,20,0.12)'
-                  e.currentTarget.style.color = isStudiesPage ? '#000000' : '#39ff14'
+                  e.currentTarget.style.color = '#39ff14'
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.backgroundColor = 'transparent'
