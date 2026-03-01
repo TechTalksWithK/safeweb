@@ -23,24 +23,35 @@ const stats = [
 export default function HeroSection() {
   return (
     <MinimalModernHero
-      logo={<Logo />}
-      badge="AI-Powered URL Security"
-      title="Is That Link Safe?"
-      subtitle="Find out in seconds."
-      description="Paste any URL and our XGBoost & neural network models — trained on over 651,000 real-world URLs — will classify it as Benign, Phishing, Malware, or Defacement."
+      logo={{
+        url: '/',
+        src: '/logo.svg',
+        alt: 'SafeWeb',
+        title: 'SafeWeb',
+      }}
+      badge="BetaTesting version of the AI models"
+      title="Scan a URL"
+      subtitle="Instantly detect phishing, malware, and malicious threats."
+      description="Our BetaTesting version of the AI models analyze URLs in real time to help you stay protected."
+
       primaryButton={{
         label: 'Scan a URL',
         onClick: () => {
-          document.getElementById('scanner-section')?.scrollIntoView({ behavior: 'smooth' })
+          document
+            .getElementById('scanner-section')
+            ?.scrollIntoView({ behavior: 'smooth' })
         },
       }}
+
+      primaryButtonNote="The URL Scanner is in beta version and is not available as we refine its features and security scanning capabilities."
+
       secondaryButton={{
-        label: 'Learn How It Works',
+        label: 'View Blog',
         onClick: () => {
-          document.getElementById('dataset-section')?.scrollIntoView({ behavior: 'smooth' })
+          window.location.href = '/blog/training-and-testing-the-models'
         },
       }}
-      stats={stats}
+
       accentColor="#39ff14"
     />
   )

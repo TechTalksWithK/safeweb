@@ -9,6 +9,7 @@ export default function MinimalModernHero({
   description,
   primaryButton,
   secondaryButton,
+  primaryButtonNote,
   stats = [],
   accentColor = '#00FFA3',
   className = '',
@@ -171,6 +172,12 @@ export default function MinimalModernHero({
                 </motion.button>
               )}
 
+              {primaryButtonNote && (
+                <p className="mt-2 text-center text-sm font-medium text-[#39ff14]">
+                  {primaryButtonNote}
+                </p>
+              )}
+                
               {secondaryButton && (
                 <motion.button
                   whileHover={{ scale: 1.05, background: '#F5F5F5' }}
